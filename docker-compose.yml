@@ -63,4 +63,4 @@ services:
     volumes:
       - ./frontend-test-report:/app/report
     environment:
-      - FRONTEND_URL=${FRONTEND_URL:-http://174.138.24.94:8888}
+      - FRONTEND_URL=https://www.google.com
