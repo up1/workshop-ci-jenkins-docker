@@ -1,0 +1,38 @@
+version: "3"
+services:
+  frontend:
+    image: somkiat/frontend:1.0
+    ports:
+      - "8888:80"
+  
+  backend:
+    image: somkiat/backend:1.0
+    environment:
+      DB_HOST: db
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  db:
+    image: postgres:16.0
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/table.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./database/data.sql:/docker-entrypoint-initdb.d/2.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
