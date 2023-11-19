@@ -6,7 +6,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "8888:80"
+      - "${FRONTEND_PORT:-8888}:80"
     depends_on:
       backend:
         condition: service_healthy
@@ -18,8 +18,8 @@ services:
       dockerfile: Dockerfile
     # mem_limit: 100m
     # cpus: 0.5
-    # ports:
-    #   - "3000:3000"
+    ports:
+      - "3000:3000"
     environment:
       DB_HOST: db
       DB_NAME: postgres
@@ -42,8 +42,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
-    ports:
-      - "5432:5432"
     volumes:
       - ./database/table.sql:/docker-entrypoint-initdb.d/1.sql
       - ./database/data.sql:/docker-entrypoint-initdb.d/2.sql
@@ -53,3 +51,16 @@ services:
       timeout: 5s
       retries: 5
       start_period: 5s
+
+  backend_test:
+    build: ./backend-testing
+    tty: true
+    volumes:
+      - ./backend-test-report:/etc/newman/newman
+  
+  frontend_test:
+    build: ./frontend-testing
+    volumes:
+      - ./frontend-test-report:/app/report
+    environment:
+      - FRONTEND_URL=${FRONTEND_URL:-http://174.138.24.94:8888}

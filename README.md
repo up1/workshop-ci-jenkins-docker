@@ -76,7 +76,12 @@ Delete all services
 $docker compose down
 ```
 
-## Step 4 :: Build and create container of frontend
+## Step 4 :: Backend Testing with Postman
+```
+$docker compose up backend_test --abort-on-container-exit --build
+```
+
+## Step 5 :: Build and create container of frontend
 * ReactJS
 * NGINX
 
@@ -96,7 +101,12 @@ Delete all services
 $docker compose down
 ```
 
-## Step 5 :: Start all services
+## Step 6 :: Backend Testing with Postman
+```
+$docker compose up frontend_test --abort-on-container-exit --build
+```
+
+## Step 7 :: Start all services
 ```
 $docker compose up -d frontend
 $docker compose ps
