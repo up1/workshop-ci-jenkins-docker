@@ -5,6 +5,8 @@
   * NodeJS
   * PostgreSQL
 
+* [Deployment steps](https://github.com/up1/workshop-ci-jenkins-docker-deploy)
+
 ## Step 1 :: Create database with PostgreSQL
 ```
 $docker compose up -d db
