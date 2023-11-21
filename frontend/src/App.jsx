@@ -73,7 +73,7 @@ function App() {
     <div>
       {merchants ? merchants : 'There is no merchant data available'}
       <br /><br />
-      <button onClick={createMerchant}>Add merchant</button>
+      <button onClick={createMerchant}>Add New merchant !!</button>
       <br />
       <button onClick={deleteMerchant}>Delete merchant</button>
       <br />
