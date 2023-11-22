@@ -16,7 +16,9 @@ Hello with UI Test
 
 *** Keywords ***
 Check hello message
-    Wait Until Element Contains  id:hello_message   Hello, from spring boot 2023
+    Wait Until Element Contains  xpath://*[@id="root"]/div/button[1]   Add New merchant...
+    Wait Until Element Contains  xpath://*[@id="root"]/div/button[2]   Delete merchant
+    Wait Until Element Contains  xpath://*[@id="root"]/div/button[3]   Update merchant
 
 Try to open in browser
     [Arguments]  ${target_url}  ${browser_type}
