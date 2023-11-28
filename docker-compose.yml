@@ -68,7 +68,7 @@ services:
   sonarscanner_frontend:
     image: sonarsource/sonar-scanner-cli
     environment:
-      - SONAR_HOST_URL=http://143.198.219.82:9000
+      - SONAR_HOST_URL=http://143.198.206.159:9000
       - SONAR_LOGIN=admin
       - SONAR_PASSWORD=xitgmLwmp
       - SONAR_PROJECT_BASE_DIR=/app
@@ -78,7 +78,7 @@ services:
   sonarscanner_backend:
     image: sonarsource/sonar-scanner-cli
     environment:
-      - SONAR_HOST_URL=http://143.198.219.82:9000
+      - SONAR_HOST_URL=http://143.198.206.159:9000
       - SONAR_LOGIN=admin
       - SONAR_PASSWORD=xitgmLwmp
       - SONAR_PROJECT_BASE_DIR=/app
