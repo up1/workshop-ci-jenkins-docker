@@ -1,4 +1,4 @@
-# Workshop 2023 1234
+# Workshop 2023/11/28
 * Frontend
   * ReactJS
 * Backend
