@@ -105,7 +105,7 @@ $docker compose down
 
 ## Step 6 :: Backend Testing with Postman
 ```
-$docker compose up frontend_test --abort-on-container-exit --build
+$docker compose up backend_test --abort-on-container-exit --build
 ```
 
 ## Step 7 :: Start all services
