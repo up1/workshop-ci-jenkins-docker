@@ -7,6 +7,14 @@
 
 * [Deployment steps](https://github.com/up1/workshop-ci-jenkins-docker-deploy)
 
+## Step 0 :: Static code analysis
+```
+$docker compose up sonarscanner_frontend
+$docker compose up sonarscanner_backend
+
+$docker compose down
+```
+
 ## Step 1 :: Create database with PostgreSQL
 ```
 $docker compose up -d db
