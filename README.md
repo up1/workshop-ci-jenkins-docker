@@ -116,9 +116,9 @@ Delete all services
 $docker compose down
 ```
 
-## Step 6 :: Backend Testing with Postman
+## Step 6 :: Frontend Testing with Robot framework and Selenium
 ```
-$docker compose up backend_test --abort-on-container-exit --build
+$docker compose up frontend_test --abort-on-container-exit --build
 ```
 
 ## Step 7 :: Start all services
