@@ -35,6 +35,17 @@ services:
       db:
         condition: service_healthy
 
+  db2:
+    image: my_postgres:1.0
+    container_name: postgres2
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+
   db:
     image: postgres:16.0
     container_name: postgres
