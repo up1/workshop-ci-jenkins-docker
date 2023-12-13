@@ -30,3 +30,8 @@ services:
     image: prom/node-exporter:latest
     ports:
       - "9101:9100"
+
+  nodejs:
+    build: ./nodejs
+    ports:
+      - "3001:3000"
