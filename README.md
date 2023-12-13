@@ -11,6 +11,9 @@
 * [SonarQube server](https://www.sonarsource.com/products/sonarqube/)
 * [Sonar Scanner](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner/)
 ```
+$git clone https://github.com/up1/workshop-ci-jenkins-docker.git demo
+$cd demo
+
 $docker compose up sonarscanner_frontend
 $docker compose up sonarscanner_backend
 
