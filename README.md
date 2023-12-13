@@ -8,6 +8,8 @@
 * [Deployment steps](https://github.com/up1/workshop-ci-jenkins-docker-deploy)
 
 ## Step 0 :: Static code analysis
+* [SonarQube server](https://www.sonarsource.com/products/sonarqube/)
+* [Sonar Scanner](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner/)
 ```
 $docker compose up sonarscanner_frontend
 $docker compose up sonarscanner_backend
