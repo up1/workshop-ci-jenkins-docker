@@ -37,7 +37,7 @@ services:
 
   db2:
     image: my_postgres:1.0
-    container_name: postgres2
+    #container_name: postgres2
     build:
       context: ./database
       dockerfile: Dockerfile
@@ -48,7 +48,7 @@ services:
 
   db:
     image: postgres:16.0
-    container_name: postgres
+    #container_name: postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
