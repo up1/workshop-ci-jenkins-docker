@@ -19,7 +19,7 @@ services:
     # mem_limit: 100m
     # cpus: 0.5
     ports:
-      - "3000:3000"
+      - "${BACKEND_PORT:-3000}:3000"
     environment:
       DB_HOST: db
       DB_NAME: postgres
