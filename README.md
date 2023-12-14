@@ -14,8 +14,8 @@
 $git clone https://github.com/up1/workshop-ci-jenkins-docker.git demo
 $cd demo
 
-$docker compose up sonarscanner_frontend
-$docker compose up sonarscanner_backend
+$docker compose up sonarscanner_frontend --abort-on-container-exit
+$docker compose up sonarscanner_backend --abort-on-container-exit
 
 $docker compose down
 ```
