@@ -24,5 +24,5 @@ Try to open in browser
     [Arguments]  ${target_url}  ${browser_type}
     ${target_url}=  Get Environment Variable    FRONTEND_URL
     Open Browser    ${target_url}    ${browser_type} 
-    ...  remote_url=http://167.172.64.144:4444
+    ...  remote_url=http://188.166.219.192:4444
     Maximize Browser Window
