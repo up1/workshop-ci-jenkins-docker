@@ -4,7 +4,7 @@
 * Backend
   * NodeJS
   * PostgreSQL
-
+* [Monitoring](https://github.com/up1/workshop-ci-jenkins-docker/tree/main/monitoring)
 * [Deployment steps](https://github.com/up1/workshop-ci-jenkins-docker-deploy)
 
 ## Step 0 :: Static code analysis
