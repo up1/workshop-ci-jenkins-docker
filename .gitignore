@@ -1,3 +1,4 @@
 *.key
 backend-test-report/
 frontend-test-report/
+frontend-test-playwright-report/

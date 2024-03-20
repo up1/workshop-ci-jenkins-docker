@@ -75,6 +75,11 @@ services:
       - ./frontend-test-report:/app/report
     environment:
       - FRONTEND_URL=https://www.google.com
+
+  frontend_test_playwright:
+    build: ./playwright
+    volumes:
+      - ./frontend-test-playwright-report:/app/report
   
   sonarscanner_frontend:
     image: sonarsource/sonar-scanner-cli
