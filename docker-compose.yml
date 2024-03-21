@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "${FRONTEND_PORT:-8888}:80"
-    depends_on:
-      backend:
-        condition: service_healthy
+    # depends_on:
+    #   backend:
+    #     condition: service_healthy
   
   backend:
     image: somkiat/backend:1.0
