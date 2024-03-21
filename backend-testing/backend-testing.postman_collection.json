@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8044c7da-2c68-42ad-9ab6-542875bd5e9a",
+		"_postman_id": "bc0a76f4-f3b8-4a42-a4e9-bd3c38831930",
 		"name": "backend-testing",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "1453931",
-		"_collection_link": "https://red-firefly-245852.postman.co/workspace/RVP~2d2b5a97-7348-4a12-9b95-e451cb6e5db4/collection/1453931-8044c7da-2c68-42ad-9ab6-542875bd5e9a?action=share&source=collection_link&creator=1453931"
+		"_collection_link": "https://red-firefly-245852.postman.co/workspace/demo01~f82f30e0-50e4-4c40-a47f-fb3ef9141381/collection/1453931-bc0a76f4-f3b8-4a42-a4e9-bd3c38831930?action=share&source=collection_link&creator=1453931"
 	},
 	"item": [
 		{
@@ -16,6 +16,10 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Try to fail :: 400\", function () {",
+							"    pm.response.to.have.status(400);",
 							"});",
 							"",
 							"pm.test(\"Your test name\", function () {",
@@ -47,7 +51,8 @@
 							"  pm.expect(tv4.validate(response, schema)).to.be.true;",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
