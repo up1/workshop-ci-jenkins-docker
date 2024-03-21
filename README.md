@@ -121,7 +121,12 @@ $docker compose down
 $docker compose up frontend_test --abort-on-container-exit --build
 ```
 
-## Step 7 :: Start all services
+## Step 7 :: Frontend Testing with Playwright
+```
+$docker compose up frontend_test_playwright --abort-on-container-exit --build
+```
+
+## Step 8 :: Start all services
 ```
 $docker compose up -d frontend
 $docker compose ps
