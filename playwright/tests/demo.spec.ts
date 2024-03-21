@@ -19,5 +19,5 @@ test('has Add new merchant button', async ({ page }) => {
   await expect(page.locator('button').nth(1)).toHaveText('Delete merchant'); 
   // Check third button
   await expect(page.locator('button').nth(2)).toBeVisible();
-  await expect(page.locator('button').nth(2)).toHaveText('Update merchant...');
+  await expect(page.locator('button').nth(2)).toHaveText('Update merchant');
 });
