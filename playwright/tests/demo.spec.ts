@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const URL = 'http://frontend:80';
+const URL = 'http://165.22.240.88:8887/';
 
 test('has title', async ({ page }) => {
   await page.goto(URL);
@@ -19,5 +19,5 @@ test('has Add new merchant button', async ({ page }) => {
   await expect(page.locator('button').nth(1)).toHaveText('Delete merchant'); 
   // Check third button
   await expect(page.locator('button').nth(2)).toBeVisible();
-  await expect(page.locator('button').nth(2)).toHaveText('Update merchant');
+  await expect(page.locator('button').nth(2)).toHaveText('Update merchant...');
 });
