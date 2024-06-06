@@ -114,3 +114,8 @@ services:
   gitleak:
     build: ./gitleak
     tty: true
+
+  mockserver:
+    build: ./mock-server
+    ports:
+      - 8882:8882
