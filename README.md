@@ -1,4 +1,4 @@
-# Workshop 2024/03/20
+# Workshop 2024/06/06
 * Frontend
   * ReactJS
 * Backend
