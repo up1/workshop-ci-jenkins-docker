@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8888:80
+    volumes:
+      - ./local-data:/mydata
       
   frontend:
     image: somkiat/frontend:1.0
