@@ -1,4 +1,11 @@
 services:
+  dotnet:
+    build:
+      context: ./hello-dotnet
+      dockerfile: Dockerfile
+    ports:
+      - 8888:80
+      
   frontend:
     image: somkiat/frontend:1.0
     build:
