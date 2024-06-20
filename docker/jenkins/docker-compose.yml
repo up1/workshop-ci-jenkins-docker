@@ -1,0 +1,13 @@
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/var/jenkins_home
+      # For Linux
+      - /var/run/docker.sock:/var/run/docker.sock
+      # For Windows
+      # - //./pipe/docker_engine://./pipe/docker_engine
