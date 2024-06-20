@@ -1,5 +1,6 @@
 services:
   dotnet:
+    image: somkiat/dotnet:2.0
     build:
       context: ./hello-dotnet
       dockerfile: Dockerfile
