@@ -82,6 +82,12 @@ services:
       timeout: 5s
       retries: 5
       start_period: 5s
+  
+  dotnet_test:
+    build: ./dotnet-testing
+    tty: true
+    volumes:
+      - ./dotnet-test-report:/etc/newman/newman
 
   backend_test:
     build: ./backend-testing
