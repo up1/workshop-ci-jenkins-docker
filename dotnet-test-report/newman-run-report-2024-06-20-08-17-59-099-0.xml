@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="dotnet" tests="1" time="0.097">
+  <testsuite name="Get data" id="74f8a380-9857-4ba2-8293-6cc42eeae256" timestamp="2024-06-20T08:17:58.970Z" tests="2" failures="1" errors="0" time="0.097">
+    <testcase name="Status code is 200" time="0.097" classname="Dotnet"/>
+    <testcase name="Response schema is valid" time="0.097" classname="Dotnet">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: acc4943f-1787-4f59-a46c-99cda7bf5a7c.]]>
+        <![CDATA[Collection name: dotnet.]]>
+        <![CDATA[Request name: Get data.]]>
+        <![CDATA[Test description: Response schema is valid.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:1).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

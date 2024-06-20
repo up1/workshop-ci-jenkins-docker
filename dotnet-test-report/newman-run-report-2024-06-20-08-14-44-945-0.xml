@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="dotnet" tests="1" time="0.135">
+  <testsuite name="Get data" id="0d616d22-9ac3-4400-9f27-641f53eb554f" timestamp="2024-06-20T08:14:44.776Z" tests="2" failures="0" errors="0" time="0.135">
+    <testcase name="Status code is 200" time="0.135" classname="Dotnet"/>
+    <testcase name="Response schema is valid" time="0.135" classname="Dotnet"/>
+  </testsuite>
+</testsuites>
