@@ -5,7 +5,7 @@ services:
       context: ./hello-dotnet
       dockerfile: Dockerfile
     ports:
-      - 8888:80
+      - "${DOTNET_PORT:-8888}:80"
     volumes:
       - ./local-data:/mydata
       
