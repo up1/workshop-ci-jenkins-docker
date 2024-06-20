@@ -1,0 +1,27 @@
+services:
+  dotnet:
+    build:
+      context: ./hello-dotnet
+      dockerfile: Dockerfile
+    ports:
+      - 8888:80
+    environment:
+      OTEL_RESOURCE_ATTRIBUTES: deployment.environment=DEV,service.namespace=demo-service.version=1.0,service.instance.id=server01
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://collector:4318
+      OTEL_METRIC_EXPORT_INTERVAL: "5000"  # so we don't have to wait 60s for metrics
+    depends_on:
+      collector:
+        condition: service_healthy
+      
+  collector:
+    image: grafana/otel-lgtm:0.6.0
+    ports:
+      - "4317:4317"
+      - "4318:4318"
+      - "3000:3000"
+    healthcheck:
+      test: curl --silent --fail localhost:3000 || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
