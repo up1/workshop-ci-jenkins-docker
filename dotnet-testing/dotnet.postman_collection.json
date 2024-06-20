@@ -29,7 +29,7 @@
 							"        temperatureF: { type: \"number\" },",
 							"        summary: { type: \"string\" }",
 							"      },",
-							"      required: [\"date\", \"temperatureC\", \"temperatureF\", \"summary\"]",
+							"      required: [\"date1\", \"temperatureC\", \"temperatureF\", \"summary\"]",
 							"    }",
 							"  };",
 							"",
