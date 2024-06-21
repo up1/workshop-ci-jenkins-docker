@@ -4,6 +4,11 @@ services:
       context: ./api
       dockerfile: Dockerfile
     mem_limit: 0.5g
+    healthcheck:
+      test: curl --fail http://localhost:3000 || exit 1
+      interval: 5s
+      timeout: 2s
+      retries: 3
     
   lb:
     build:
@@ -11,3 +16,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8888:80
+    depends_on:
+      api: 
+        condition: service_healthy
+
