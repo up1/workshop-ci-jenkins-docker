@@ -19,6 +19,7 @@ builder.Logging
 // Add tracing and metric
 builder.Services.AddOpenTelemetry()
     .WithTracing(tracerBuilder => tracerBuilder
+        .AddSource("demo-service")
         .AddAspNetCoreInstrumentation()
         .AddConsoleExporter()
         .AddOtlpExporter())

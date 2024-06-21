@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace hello_dotnet.Controllers;
@@ -12,6 +13,7 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
+    private static readonly ActivitySource _activitySource = new("demo-service");
 
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
@@ -21,6 +23,9 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+        using var activity = _activitySource.StartActivity("GetWeatherForecast");
+
+        callOtherService();
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
@@ -29,5 +34,13 @@ public class WeatherForecastController : ControllerBase
             NewData = "New Data..."
         })
         .ToArray();
+    }
+
+    public void callOtherService()
+    {
+        using var activity = _activitySource.StartActivity("callOtherService");
+        _logger.LogInformation("Calling other service");
+        // Delay 1 second
+        Thread.Sleep(1000);
     }
 }
