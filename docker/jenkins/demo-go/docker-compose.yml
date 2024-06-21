@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    mem_limit: 0.5g
+    
+  lb:
+    build:
+      context: ./lb
+      dockerfile: Dockerfile
+    ports:
+      - 8888:80
