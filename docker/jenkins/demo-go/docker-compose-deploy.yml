@@ -1,0 +1,12 @@
+services:
+  api:
+    image: api:1.0
+    ports:
+      - 3000:3000
+    healthcheck:
+      test: curl --fail http://localhost:3000 || exit 1
+      interval: 5s
+      timeout: 2s
+      retries: 3
+    
+
