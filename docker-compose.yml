@@ -120,7 +120,8 @@ services:
   sonarscanner_backend:
     image: sonarsource/sonar-scanner-cli
     environment:
-      - SONAR_HOST_URL=http://68.183.189.203:9000
+      - SONAR_HOST_URL=http://152.42.232.46:9000
+      - SONAR_TOKEN=sqa_36aebeaf9ce3dcb4d8f8087d24d8b0e52642c0af
       - SONAR_LOGIN=admin
       - SONAR_PASSWORD=xitgmLwmp
       - SONAR_PROJECT_BASE_DIR=/app
