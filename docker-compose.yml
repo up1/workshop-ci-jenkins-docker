@@ -100,7 +100,7 @@ services:
     volumes:
       - ./frontend-test-report:/app/report
     environment:
-      - FRONTEND_URL=https://www.google.com
+      - FRONTEND_URL=http://157.230.44.174:8889
 
   frontend_test_playwright:
     build: ./playwright
