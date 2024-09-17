@@ -131,6 +131,8 @@ services:
   gitleak:
     build: ./gitleak
     tty: true
+    volumes:
+      - .:/code
 
   mockserver:
     build: ./mock-server
