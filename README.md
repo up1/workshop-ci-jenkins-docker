@@ -141,4 +141,9 @@ $docker compose logs --follow
 Test again !!
 * http://localhost:8888/
 
+## Step 9 :: Scan secret key with [Gitleaks](https://github.com/gitleaks/gitleaks)
+```
+$docker compose up gitleak --abort-on-container-exit
+```
+
 
