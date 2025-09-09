@@ -62,6 +62,14 @@ app.put("/merchants/:id", (req, res) => {
     });
 });
 
+// Try to fail with security issue
+// Example of Open Redirect
+// http://localhost:3000/some/redirect?target=https://www.google.com
+app.get('/some/redirect', function (req, res) {
+    var target = req.param("target");
+    res.redirect(target);
+});
+
 app.listen(port, () => {
   console.log(`App running on port ${port}.`);
 });

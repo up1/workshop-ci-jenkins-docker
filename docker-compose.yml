@@ -135,6 +135,12 @@ services:
     volumes:
       - .:/code
 
+  njsscan:
+    image: opensecurity/njsscan
+    command: ["/src"]
+    volumes:
+      - ./backend:/src
+
   mockserver:
     build: ./mock-server
     ports:

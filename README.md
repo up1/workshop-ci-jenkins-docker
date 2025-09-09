@@ -146,4 +146,10 @@ Test again !!
 $docker compose up gitleak --abort-on-container-exit
 ```
 
+## Step 10 :: Static application testing (SAST) with [njsscan](https://github.com/ajinabraham/njsscan)
+* For NodeJS application
+```
+$docker compose up njsscan --abort-on-container-exit
+```
+
 
